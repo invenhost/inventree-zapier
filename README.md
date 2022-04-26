@@ -34,3 +34,9 @@ inv migrate
 
 4. Configure
 Create an API-token in the admin interface and add set up the zapier integration in Zapier.com itself.
+
+## License
+This project is licensed as MIT.
+
+## State of the Code
+This is currently a PoC / 'beta' - at least till the Zapier App is published. Please feel free to file FRs, issues or just ideas.
