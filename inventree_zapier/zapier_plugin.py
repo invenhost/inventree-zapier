@@ -9,7 +9,7 @@ import json
 from inventree_zapier.version import ZapierPluginVersion
 
 from django.http import JsonResponse
-from django.conf.urls import url, include
+from django.conf.urls import url
 from django.views.decorators.csrf import csrf_exempt
 
 # InvenTree plugin libs
@@ -48,7 +48,7 @@ class ZapierPlugin(AppMixin, APICallMixin, EventMixin, UrlsMixin, IntegrationPlu
         """unregister a hook"""
         from .models import ZapierHook
 
-        obj= ZapierHook.objects.filter(hookurl=self.get_hookurl(request))
+        obj = ZapierHook.objects.filter(hookurl=self.get_hookurl(request))
         if obj:
             obj.delete()
             return JsonResponse({'response': 'ok. Hook deleted'})
@@ -57,10 +57,9 @@ class ZapierPlugin(AppMixin, APICallMixin, EventMixin, UrlsMixin, IntegrationPlu
     def view_event_list(self, request):
         """for getting a sample list"""
         return JsonResponse([
-            {'event': 'instance.created', 'id':1, 'model': 'Part', 'table': 'part.Part', 'args': '', 'kwargs': ''},
-            {'event': 'instance.saved', 'id':1, 'model': 'Part', 'table': 'part.Part', 'args': '', 'kwargs': ''}
+            {'event': 'instance.created', 'id': 1, 'model': 'Part', 'table': 'part.Part', 'args': '', 'kwargs': ''},
+            {'event': 'instance.saved', 'id': 1, 'model': 'Part', 'table': 'part.Part', 'args': '', 'kwargs': ''}
         ], safe=False)
-
 
     def process_event(self, event, *args, **kwargs):
         """ Custom event processing """
