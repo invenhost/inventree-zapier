@@ -57,8 +57,8 @@ class ZapierPlugin(AppMixin, APICallMixin, EventMixin, UrlsMixin, IntegrationPlu
     def view_event_list(self, request):
         """for getting a sample list"""
         return JsonResponse([
-            {'event': 'instance.created', 'id':1, 'model': 'Part'},
-            {'event': 'instance.saved', 'id':1, 'model': 'Part'}
+            {'event': 'instance.created', 'id':1, 'model': 'Part', 'table': 'part.Part', 'args': '', 'kwargs': ''},
+            {'event': 'instance.saved', 'id':1, 'model': 'Part', 'table': 'part.Part', 'args': '', 'kwargs': ''}
         ], safe=False)
 
 
