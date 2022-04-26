@@ -36,7 +36,7 @@ inv migrate
 Create an API-token in the admin interface and add set up the zapier integration in Zapier.com itself.
 
 ## License
-This project is licensed as MIT.
+This project is licensed as MIT. Copy and do what you want - maybe tag your new plugin so others can find it. The more the merrier.
 
 ## State of the Code
 This is currently a PoC / 'beta' - at least till the Zapier App is published. Please feel free to file FRs, issues or just ideas.
