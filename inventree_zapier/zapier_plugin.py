@@ -77,7 +77,14 @@ class ZapierPlugin(AppMixin, APICallMixin, EventMixin, UrlsMixin, IntegrationPlu
                     endpoint_is_url=True,
                     simple_response=False,
                     method='POST',
-                    data={'event': event, 'args': str(args), 'kwargs': str(kwargs)}
+                    data={
+                        'event': event,
+                        'model': str(kwargs.get('model', '')),
+                        'table': str(kwargs.get('table', '')),
+                        'id': str(kwargs.get('id', '')),
+                        'args': str(args),
+                        'kwargs': str(kwargs)
+                    }
                 )
                 print(ret)
 
