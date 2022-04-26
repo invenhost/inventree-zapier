@@ -6,18 +6,31 @@
 
 Integrate Zapier into InvenTree
 
-## Installation
+## Setup
 
-Install this plugin as follows:
+1. Install
+Install this plugin as follows **in the enviroment of your InvenTree instance**:
 
-```
+```bash
 pip install inventree-zapier
 ```
 
 Or, add to your `plugins.txt` file:
 
-```
+```txt
 inventree-zapier
 ```
- 
+
+2. Enable
+Enable the plugin in the plugin settings. You need to be signed in as a superuser for this.
+**The server will erstart if you enable the plugin**
+
+3. Migrate
+Access your instances python enviroment and run
+
+```bash
+inv migrate
+```
+
+4. Configure
 Create an API-token in the admin interface and add set up the zapier integration in Zapier.com itself.
