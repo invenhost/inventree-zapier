@@ -2,8 +2,6 @@
 Plugin to integrate Zapier into InvenTree.
 """
 
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
 import json
 
 from inventree_zapier.version import ZapierPluginVersion
