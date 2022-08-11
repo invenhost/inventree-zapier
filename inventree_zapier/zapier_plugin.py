@@ -13,19 +13,19 @@ from django.conf.urls import url
 from django.views.decorators.csrf import csrf_exempt
 
 # InvenTree plugin libs
-from plugin import IntegrationPluginBase
+from plugin import InvenTreePlugin
 from plugin.mixins import UrlsMixin, APICallMixin, AppMixin, EventMixin
 
 
-class ZapierPlugin(AppMixin, APICallMixin, EventMixin, UrlsMixin, IntegrationPluginBase):
+class ZapierPlugin(AppMixin, APICallMixin, EventMixin, UrlsMixin, InvenTreePlugin):
 
     AUTHOR = "Matthias Mair"
     DESCRIPTION = "Zapier plugin for InvenTree"
     VERSION = ZapierPluginVersion
 
-    PLUGIN_NAME = "inventree_zapier"
-    PLUGIN_SLUG = "zapier"
-    PLUGIN_TITLE = "Zapier connector for InvenTree"
+    NAME = "inventree_zapier"
+    SLUG = "zapier"
+    TITLE = "Zapier connector for InvenTree"
 
     def view_connection_test(self, request):
         """for testing the connection"""
