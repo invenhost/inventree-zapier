@@ -1,7 +1,3 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![PEP](https://github.com/matmair/inventree-zapier/actions/workflows/pep.yaml/badge.svg)
-
-
 # inventree-zapier
 
 Integrate Zapier into InvenTree
@@ -9,21 +5,11 @@ Integrate Zapier into InvenTree
 ## Setup
 
 1. Install
-Install this plugin as follows **in the enviroment of your InvenTree instance**:
-
-```bash
-pip install inventree-zapier
-```
-
-Or, add to your `plugins.txt` file:
-
-```txt
-inventree-zapier
-```
+Install this plugin in the webinterface with the packagename `inventree-zapier`
 
 2. Enable
 Enable the plugin in the plugin settings. You need to be signed in as a superuser for this.
-**The server will erstart if you enable the plugin**
+**The server will restart if you enable the plugin**
 
 3. Migrate
 Access your instances python enviroment and run
