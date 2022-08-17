@@ -1,1 +1,1 @@
-ZapierPluginVersion = "0.2.2"
+ZapierPluginVersion = "0.3a"
