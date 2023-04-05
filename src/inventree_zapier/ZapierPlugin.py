@@ -4,8 +4,6 @@ Plugin to integrate Zapier into InvenTree.
 
 import json
 
-from inventree_zapier.version import ZapierPluginVersion
-
 from django.http import JsonResponse
 from django.urls import path
 from django.views.decorators.csrf import csrf_exempt
@@ -19,7 +17,6 @@ class ZapierPlugin(AppMixin, APICallMixin, EventMixin, UrlsMixin, InvenTreePlugi
 
     AUTHOR = "Matthias Mair"
     DESCRIPTION = "Zapier plugin for InvenTree"
-    VERSION = ZapierPluginVersion
 
     NAME = "inventree_zapier"
     SLUG = "zapier"
