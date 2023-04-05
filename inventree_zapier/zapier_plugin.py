@@ -7,7 +7,7 @@ import json
 from inventree_zapier.version import ZapierPluginVersion
 
 from django.http import JsonResponse
-from django.conf.urls import url
+from django.urls import path
 from django.views.decorators.csrf import csrf_exempt
 
 # InvenTree plugin libs
@@ -87,8 +87,8 @@ class ZapierPlugin(AppMixin, APICallMixin, EventMixin, UrlsMixin, InvenTreePlugi
 
     def setup_urls(self):
         return [
-            url(r'^test/', self.view_connection_test, name='test'),
-            url(r'^event/register/', self.view_event_reg, name='event-register'),
-            url(r'^event/unsub/', self.view_event_unsub, name='event-unsub'),
-            url(r'^event/list/', self.view_event_list, name='event-list'),
+            path(r'^test/', self.view_connection_test, name='test'),
+            path(r'^event/register/', self.view_event_reg, name='event-register'),
+            path(r'^event/unsub/', self.view_event_unsub, name='event-unsub'),
+            path(r'^event/list/', self.view_event_list, name='event-list'),
         ]
