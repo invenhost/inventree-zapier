@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools", "wheel", "pyyaml"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "inventree-zapier"
+version =  "0.3"
+description="Zapier plugin for InvenTree"
+readme = "README.md"
+license = {text = "MIT"}
+keywords = ["inventree", "inventree-plugin", "zapier", "inventory",]
+authors = [
+    {name = "Matthias J Mair", email =  "code@mjmair.com"}
+]
+classifiers=[
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Plugins",
+    "Framework :: Django",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Manufacturing",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Scientific/Engineering",
+]
+requires-python=">=3.9"
+dependencies = ['django',]
+
+[project.optional-dependencies]
+dev = ['twine', 'setuptools']
+
+[project.urls]
+repository = "https://github.com/matmair/inventree-zapier"
+"Bug Tracker" = "https://github.com/matmair/inventree-zapier/issues"
+
+[project.entry-points."inventree_plugins"]
+inventree-zapier = "inventree_zapier:ZapierPlugin"
+
+[tool.setuptools.packages.find]
+where = ["src"]
