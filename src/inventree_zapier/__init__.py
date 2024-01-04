@@ -2,4 +2,6 @@
 
 from .ZapierPlugin import ZapierPlugin
 
-__all__ = [ZapierPlugin, ]
+__all__ = [
+    ZapierPlugin,
+]

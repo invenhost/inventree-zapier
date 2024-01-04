@@ -12,7 +12,7 @@ Enable the plugin in the plugin settings. You need to be signed in as a superuse
 **The server will restart if you enable the plugin**
 
 3. Migrate
-Access your instances python enviroment and run
+Access your instances python environment and run
 
 ```bash
 inv migrate
