@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "inventree-zapier"
-version =  "0.3"
+version =  "1.0"
 description="Zapier plugin for InvenTree"
 readme = "README.md"
 license = {text = "MIT"}
